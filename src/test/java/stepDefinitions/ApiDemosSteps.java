@@ -93,7 +93,7 @@ public class ApiDemosSteps extends ReusableMethods {
 
     @And("check box secili olmali")
     public void checkBoxSeciliOlmali() {
-        if (screens.preferenceDependenciesScreen().checkBox.getAttribute("checked").equals("false")) {
+        if (screens.switchScreen().checkBox.getAttribute("checked").equals("false")) {
             tapOn(screens.switchScreen().checkBox);
         }
     }
