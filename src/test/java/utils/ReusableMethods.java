@@ -29,6 +29,7 @@ public class ReusableMethods {
             List<MobileElement> mobileElementList = Driver.getAppiumDriver().findElementsByXPath("//android.widget.TextView[@text='"+elementText+"']");
             if (mobileElementList.size()>0){
                 mobileElementList.get(0).click();
+                      break;
             }else scrollWithUiScrollable(elementText);
         }
 
@@ -41,6 +42,7 @@ public class ReusableMethods {
                 waitToBeVisible(el, 10);
                 if (el.isDisplayed()) {
                     elementFound = true;
+                          break;
                 }
             }
         }
